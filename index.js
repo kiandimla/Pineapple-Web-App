@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 var express = require('express');
 var app = express();
 
-mongoose.connect('mongodb://localhost/apdevDB');
+mongoose.connect('mongodb+srv://kiancdimla:asdf@cluster0.uofdbn8.mongodb.net/');
 
 app.use('/stylesheets', express.static(__dirname + '/stylesheets'));
 app.use('/images', express.static(__dirname + '/images'));
@@ -126,7 +126,7 @@ app.use(
             maxAge: 3 * 7 * 24 * 60 * 60 * 1000
         },
         store: MongoStore.create({ 
-            mongoUrl: 'mongodb://localhost/apdevDB',
+            mongoUrl: 'mongodb+srv://kiancdimla:asdf@cluster0.uofdbn8.mongodb.net/',
             collectionName: 'sessions' 
         })
     })
